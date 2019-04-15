@@ -3,6 +3,21 @@ import $ from 'jquery';
 import Cart from './Cart.jsx';
 import Quantity from './Quantity.jsx';
 import Rating from './Rating.jsx';
+import Modal from 'react-modal';
+import Checkout from './Checkout.jsx';
+
+const customStyles = {
+  content : {
+    top: '10%',
+    left: '30%',
+    right: '30%',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    margin: 0,
+    padding:0
+  }
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -13,11 +28,13 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       deepfryd_id: "81420",
+      modalIsOpen: false
     }
 
     this.setState = this.setState.bind(this);
     this.plus = this.plus.bind(this);
     this.minus = this.minus.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   componentDidMount () {
@@ -30,6 +47,9 @@ class App extends React.Component {
       });
     });
 
+  }
+  toggleModal() {
+    this.setState({modalIsOpen: !this.state.modalIsOpen});
   }
 
   plus () {
@@ -77,7 +97,23 @@ class App extends React.Component {
         </div>
         <div className="col3">
           <div className="price">${this.state.currentPrice}</div>
-          <Cart />
+          <Cart onClick={this.toggleModal} />
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+          >
+          <Checkout
+            quantity={this.state.quantity}
+            price={this.state.currentPrice}
+            prodName={productName}
+            prodId={this.state.deepfryd_id}
+            modelNum={this.state.stereo_data.model_number}
+            quant={this.state.quantity}
+            onClick={this.toggleModal}
+          />
+          </Modal>
+
         </div>
       </div>
     )

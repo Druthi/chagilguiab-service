@@ -166,3 +166,104 @@ h3 {
   color: #000;
   cursor: pointer;
 }
+
+
+.checkout-container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border-bottom: 1px dotted;
+  border-bottom-color: rgb(204, 204, 204);
+  margin-bottom: 10px;
+}
+
+ .checkout-exit-x {
+  box-sizing: border-box;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  float: right;
+}
+
+ .checkout-top-panel {
+  background-color: rgb(241, 240, 240);
+  border-bottom-color: black;
+  border-bottom: none;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+ .checkout-items-added {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+ .checkout-items-subtotal {
+  font-size: 10px;
+  padding-top: 3px;
+  display: block;
+}
+
+ .green-checkmark {
+  color: green;
+  font-size: 25px;
+}
+
+ .checkout-info {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 11px;
+  display: block;
+  margin-left: 20px;
+}
+
+ .checkout-info-title {
+  font-size: 11px;
+}
+
+ .txt-checkout-price {
+  float: right;
+  color: black;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+ .checkout-btn {
+  font-size: 12px;
+  white-space: normal;
+  font-style: normal;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background-color: #5cb85c;;
+  border-color: #4cae4c;
+  padding: 6px 12px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin: 3px;
+}
+
+ .checkout-btn:hover {
+  background-color: #307130;
+}
+
+ .cart-btn {
+  font-size: 12px;
+  white-space: normal;
+  font-style: normal;
+  display: inline-block;
+  text-align: center;
+  color: black;
+  background-color:rgb(255, 255, 255);
+  border-color: #4cae4c;
+  padding: 6px 12px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin: 3px;
+}
+
+ .cart-btn:hover{background-color:#ccc;}
