@@ -25,7 +25,7 @@ class App extends React.Component {
     $.get(`http://localhost:3002${path}`, (results) => {
       this.setState({
         stereo_data: results,
-        currentPrice: results.current_price,
+        currentPrice: results.current_price.toFixed(2),
         deepfryd_id: results.deepfryd_id,
       });
     });

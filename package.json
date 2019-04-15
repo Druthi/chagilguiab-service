@@ -37,6 +37,7 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start-dev": "nodemon server/index.js -w database -w server",
+    "start": "webpack -d --watch & nodemon server/index.js -w database -w server",
     "seed-db": "mysql -u root < schema.sql && node server/init.js",
     "test": "jest"
   },
